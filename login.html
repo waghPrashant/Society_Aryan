@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Society</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+  <script src="assets/firebase-config.js"></script>
+  <script defer src="assets/app_firebase.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Member Login</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="updates.html">Updates</a>
+      <a href="repository.html">Documents</a>
+      <a href="admin.html">Admin</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <div id="authStatus" class="note" style="margin-top:8px;"></div>
+  </header>
+  <main>
+
+<h2>Member Login</h2>
+<form id="loginForm">
+  <label>Email
+    <input id="loginEmail" type="email" required>
+  </label>
+  <label>Password
+    <input id="loginPassword" type="password" required>
+  </label>
+  <div style="display:flex; gap:8px; align-items:center;">
+    <button type="submit">Login</button>
+    <button type="button" id="btnLogout" class="secondary">Logout</button>
+  </div>
+  <div id="loginOut" class="note" style="margin-top:6px;"></div>
+</form>
+<p class="note">Create users in Firebase Console → Authentication.</p>
+
+  </main>
+</body>
+</html>

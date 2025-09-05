@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documents - Society</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+  <script src="assets/firebase-config.js"></script>
+  <script defer src="assets/app_firebase.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Document Repository</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="updates.html">Updates</a>
+      <a href="repository.html">Documents</a>
+      <a href="admin.html">Admin</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <div id="authStatus" class="note" style="margin-top:8px;"></div>
+  </header>
+  <main>
+
+<h2>Document Repository</h2>
+<div class="controls">
+  <select id="repoCategoryFilter"><option value="">All categories</option></select>
+  <select id="repoAccessFilter">
+    <option value="">All access</option><option value="public">Public</option><option value="restricted">Restricted</option>
+  </select>
+  <input id="repoSearch" type="search" placeholder="Search by title or category">
+</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Category</th><th>Title</th><th>Date</th><th>Access</th><th>Size</th><th>Download</th></tr>
+    </thead>
+    <tbody id="docsTbody"><tr><td colspan="6">Loading…</td></tr></tbody>
+  </table>
+</div>
+<div id="repoStatus" class="note" style="margin-top:6px;"></div>
+
+  </main>
+</body>
+</html>
